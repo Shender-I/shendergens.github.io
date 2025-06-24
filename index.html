@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одеська Астрономічна Обсерваторія</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="top"></div>
+<header>
+    <div class="nav-container">
+        <a href="#top" class="logo" data-key="logo">ОБСЕРВАТОРІЯ</a>
+        <nav>
+            <a href="#about" data-key="nav-about">ПРО НАС</a>
+            <a href="#research" data-key="nav-research">ДОСЛІДЖЕННЯ</a>
+            <a href="#events" data-key="nav-events">ПОДІЇ</a>
+        </nav>
+        <div class="language-switcher">
+            <a href="#" class="lang-switch" data-lang="ua">UA</a>
+            <a href="#" class="lang-switch" data-lang="ru">RU</a>
+            <a href="#" class="lang-switch" data-lang="en">EN</a>
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <h1 data-key="hero-title">АСТРОНОМІЧНА ОБСЕРВАТОРІЯ</h1>
+    <p data-key="hero-subtitle">Дослідження космосу, відкриття, екскурсії та освітні програми — усе це в серці Одеси.</p>
+    <div class="buttons">
+        <a href="#visit" data-key="btn-visit">ВІДВІДАТИ</a>
+        <a href="#research" data-key="btn-research">ДОСЛІДЖЕННЯ</a>
+        <a href="#events" data-key="btn-events">КАЛЕНДАР ПОДІЙ</a>
+    </div>
+</div>
+
+<div class="observatory" id="about">
+    <div class="observatory-content">
+        <h2 data-key="observatory-title">Про Обсерваторію</h2>
+        <p data-key="observatory-text">Одеська астрономічна обсерваторія, заснована в 1890 році, є провідним науковим центром України, де проводяться дослідження зоряної астрономії, а також екскурсії та освітні заходи для громадськості.</p>
+    </div>
+</div>
+
+<div class="science" id="research">
+    <div class="science-content">
+        <h2 data-key="science-title">Наукові дослідження</h2>
+        <p data-key="science-text">Одеська обсерваторія активно досліджує зорі та галактики, використовуючи сучасні телескопи, та співпрацює з міжнародними астрономічними центрами.</p>
+    </div>
+</div>
+
+<div class="events" id="events">
+    <div class="events-content">
+        <h2 data-key="events-title">Події та екскурсії</h2>
+        <p data-key="events-text">Обсерваторія пропонує захопливі екскурсії з оглядом неба через телескопи та лекції для всіх охочих щомісяця.</p>
+    </div>
+</div>
+
+<script>
+    const translations = {
+      ua: {
+        logo: "ОБСЕРВАТОРІЯ",
+        "nav-about": "ПРО НАС",
+        "nav-research": "ДОСЛІДЖЕННЯ",
+        "nav-events": "ПОДІЇ",
+        "hero-title": "АСТРОНОМІЧНА ОБСЕРВАТОРІЯ",
+        "hero-subtitle": "Дослідження космосу, відкриття, екскурсії та освітні програми — усе це в серці Одеси.",
+        "btn-visit": "ВІДВІДАТИ",
+        "btn-research": "ДОСЛІДЖЕННЯ",
+        "btn-events": "КАЛЕНДАР ПОДІЙ",
+        "observatory-title": "Про Обсерваторію",
+        "observatory-text": "Одеська астрономічна обсерваторія, заснована в 1890 році, є провідним науковим центром України, де проводяться дослідження зоряної астрономії, а також екскурсії та освітні заходи для громадськості.",
+        "science-title": "Наукові дослідження",
+        "science-text": "Одеська обсерваторія активно досліджує зорі та галактики, використовуючи сучасні телескопи, та співпрацює з міжнародними астрономічними центрами.",
+        "events-title": "Події та екскурсії",
+        "events-text": "Обсерваторія пропонує захопливі екскурсії з оглядом неба через телескопи та лекції для всіх охочих щомісяця."
+      },
+      ru: {
+        logo: "ОБСЕРВАТОРИЯ",
+        "nav-about": "О НАС",
+        "nav-research": "ИССЛЕДОВАНИЯ",
+        "nav-events": "СОБЫТИЯ",
+        "hero-title": "АСТРОНОМИЧЕСКАЯ ОБСЕРВАТОРИЯ",
+        "hero-subtitle": "Исследования космоса, открытия, экскурсии и образовательные программы — все это в сердце Одессы.",
+        "btn-visit": "ПОСЕТИТЬ",
+        "btn-research": "ИССЛЕДОВАНИЯ",
+        "btn-events": "КАЛЕНДАРЬ СОБЫТИЙ",
+        "observatory-title": "О Обсерватории",
+        "observatory-text": "Одесская астрономическая обсерватория, основанная в 1890 году, является ведущим научным центром Украины, где проводятся исследования звездной астрономии, а также экскурсии и образовательные мероприятия для общественности.",
+        "science-title": "Научные исследования",
+        "science-text": "Одесская обсерватория активно исследует звезды и галактики, используя современные телескопы, и сотрудничает с международными астрономическими центрами.",
+        "events-title": "События и экскурсии",
+        "events-text": "Обсерватория предлагает увлекательные экскурсии с обзором неба через телескопы и лекции для всех желающих ежемесячно."
+      },
+      en: {
+        logo: "OBSERVATORY",
+        "nav-about": "ABOUT",
+        "nav-research": "RESEARCH",
+        "nav-events": "EVENTS",
+        "hero-title": "ASTRONOMICAL OBSERVATORY",
+        "hero-subtitle": "Exploring the cosmos, discoveries, tours, and educational programs—all in the heart of Odessa.",
+        "btn-visit": "VISIT",
+        "btn-research": "RESEARCH",
+        "btn-events": "EVENT CALENDAR",
+        "observatory-title": "About the Observatory",
+        "observatory-text": "The Odessa Astronomical Observatory, founded in 1890, is a leading scientific center in Ukraine, conducting stellar astronomy research and offering tours and educational events for the public.",
+        "science-title": "Scientific Research",
+        "science-text": "The Odessa Observatory actively studies stars and galaxies using modern telescopes and collaborates with international astronomical centers.",
+        "events-title": "Events and Tours",
+        "events-text": "The observatory offers exciting tours with sky observations through telescopes and monthly lectures for all interested."
+      }
+    };
+
+    document.querySelectorAll('.lang-switch').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = button.getAttribute('data-lang');
+        document.querySelectorAll('[data-key]').forEach(element => {
+          const key = element.getAttribute('data-key');
+          element.textContent = translations[lang][key] || element.textContent;
+        });
+      });
+    });
+</script>
+</body>
+</html>

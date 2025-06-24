@@ -1,0 +1,293 @@
+/* Сброс отступов и базовая настройка */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/background.jpg') no-repeat center 70%;
+  background-size: cover;
+  z-index: -1;
+}
+
+body, html {
+  font-family: 'Roboto', Arial, sans-serif; /* Измененный шрифт */
+  color: white;
+  scroll-behavior: smooth;
+  /* Убраны background свойства, так как они перенесены в ::before */
+}
+
+/* Навигация */
+header {
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo:hover {
+  color: #4fc3f7;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #4fc3f7;
+}
+
+.language-switcher a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.language-switcher a:hover {
+  color: #4fc3f7;
+}
+
+/* Главный блок с заголовком и кнопками */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+}
+
+/* Кнопки */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.buttons a {
+  padding: 12px 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #81d4fa;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons a:hover {
+  background-color: rgba(129, 212, 250, 0.2);
+  box-shadow: 0 0 10px #4fc3f7;
+}
+
+/* Блок "Про Обсерваторію" */
+.observatory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.observatory-content {
+  max-width: 800px;
+}
+
+.observatory h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.observatory p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Блок "Наукові дослідження" */
+.science {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.science-content {
+  max-width: 800px;
+}
+
+.science h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.science p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Блок "Події та екскурсії" */
+.events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.events-content {
+  max-width: 800px;
+}
+
+.events h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.events p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a, .language-switcher a {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .buttons a {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .observatory, .science, .events {
+    padding: 60px 15px;
+  }
+
+  .observatory h2, .science h2, .events h2 {
+    font-size: 1.8em;
+  }
+
+  .observatory p, .science p, .events p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1em;
+  }
+
+  nav a, .language-switcher a {
+    font-size: 0.8em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons a {
+    padding: 8px 16px;
+    font-size: 0.8em;
+  }
+
+  .observatory h2, .science h2, .events h2 {
+    font-size: 1.5em;
+  }
+
+  .observatory p, .science p, .events p {
+    font-size: 0.9em;
+  }
+}
